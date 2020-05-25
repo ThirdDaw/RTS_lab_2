@@ -28,6 +28,7 @@ for i in range(dotNumber):
         currentX += ampls[j] * math.sin(omegaInterval * (j + 1) * i + phases[j])
     mainX.append(currentX)
 
+
 fft_dot_number = dotNumber // 2
 
 x_real_first = [0 for i in range(fft_dot_number)]
@@ -74,7 +75,7 @@ for i in range(fft_dot_number):
 
 finish = datetime.now()
 alg_time = finish - start
-print(alg_time)
+print("FFT execution time: ", alg_time)
 
 print(general_x)
 plt.plot(general_x)
